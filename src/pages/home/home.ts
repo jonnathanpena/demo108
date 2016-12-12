@@ -8,6 +8,7 @@ import { NavController } from 'ionic-angular';
   animations: [
     trigger('itemState', [
       state('in', style({opacity: 1, transform: 'translateX(0)'})),
+      //Enter
       transition('void => *', [
         style({
           opacity: 0,
@@ -15,6 +16,7 @@ import { NavController } from 'ionic-angular';
         }),
         animate('300ms ease-in')
       ]),
+      //Leave
       transition('* => void', animate('300ms ease-out', style({
         opacity: 0,
         transform: 'translateX(100%)'
@@ -26,9 +28,7 @@ export class HomePage {
 
   items: any[] = [];
 
-  constructor(public navCtrl: NavController) {
-    
-  }
+  constructor(public navCtrl: NavController) {}
 
   add(){
     this.items.push({
