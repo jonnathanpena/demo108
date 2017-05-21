@@ -1,7 +1,9 @@
-import { Component, trigger,state, style, transition, animate } from '@angular/core';
+import { Component } from '@angular/core';
+import { trigger,state, style, transition, animate } from '@angular/animations';
 
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
